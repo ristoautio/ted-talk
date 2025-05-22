@@ -1,6 +1,6 @@
 package com.example.tedtalk.config;
 
-import com.example.tedtalk.service.TedTalkService;
+import com.example.tedtalk.service.TedTalkImportService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -16,9 +16,9 @@ public class DataImport {
     Resource resourceFile;
 
     @Bean
-    public CommandLineRunner loadData(TedTalkService tedTalkService) {
+    public CommandLineRunner loadData(TedTalkImportService tedTalkImportService) {
         return (args) -> {
-            tedTalkService.importCSV(resourceFile);
+            tedTalkImportService.importCSV(resourceFile);
         };
     }
 }
