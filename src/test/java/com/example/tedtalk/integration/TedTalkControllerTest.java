@@ -1,6 +1,5 @@
 package com.example.tedtalk.integration;
 
-import com.example.tedtalk.TedTalkApplication;
 import com.example.tedtalk.entity.TedTalkEntity;
 import com.example.tedtalk.repository.TedTalkRepository;
 import org.junit.jupiter.api.Test;
@@ -17,8 +16,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @AutoConfigureMockMvc
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = TedTalkApplication.class)
-public class TedTalkControllerIT {
+@SpringBootTest
+public class TedTalkControllerTest {
 
     @Autowired
     private MockMvc mockMvc;

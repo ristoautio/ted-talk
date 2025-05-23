@@ -58,7 +58,6 @@ public class TedTalkMapper {
         return value;
     }
 
-
     public static TedTalkEntity mapDtoToEntity(TedTalkCreateUpdateDto createDto) {
         TedTalkEntity talk = new TedTalkEntity();
         talk.setTitle(createDto.getTitle());
